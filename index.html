@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="cloudy.png" />
+    <title>Weather Now</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- search and datalist functionality -->
+      <article class="search">
+        <section id="search-button-div">
+          <input
+            id="input-cites"
+            list="cities"
+            name="search"
+            type="search"
+            placeholder="Search City"
+            autocomplete="off"
+          />
+          <span class="material-symbols-rounded"> my_location </span>
+        </section>
+        <datalist id="cities"> </datalist>
+      </article>
+      <!-- displaying city information -->
+      <article class="city">
+        <h1 id="city-name">City Name</h1>
+        <h1 id="temp-main">Temp</h1>
+        <p id="description-main">description</p>
+        <section id="high-low-div">
+          <span id="high">high</span> <span id="low"> low</span>
+        </section>
+      </article>
+      <!-- five day forecast -->
+      <article class="five-day">
+        <h2>5 Day-forecast</h2>
+        <div class="inside-five-day-forecast"></div>
+      </article>
+      <!-- hourly-forecast -->
+      <article class="hourly-forecast">
+        <h2>Hourly-forecast</h2>
+        <div
+          id="inside-hourly-forecast-div-id"
+          class="inside-hourly-forecast"
+        ></div>
+      </article>
+      <!-- feel-like -->
+      <article class="feel-like">
+        <h3>Feels Like</h3>
+        <h3 id="feels-like-h3"></h3>
+      </article>
+      <article class="humidity">
+        <h3>Humidity</h3>
+        <h3 id="humidity-h3">Feels Like</h3>
+      </article>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

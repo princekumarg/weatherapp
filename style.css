@@ -1,0 +1,129 @@
+* {
+    margin: 0px;
+    color: whitesmoke;
+  }
+  body {
+    margin: 0;
+  }
+  .container {
+    background: linear-gradient(
+      112.1deg,
+      rgb(33, 44, 78) 11.4%,
+      rgb(63, 76, 119) 70.2%
+    );
+  
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    grid-template-areas:
+      "search search search search"
+      "city city city city"
+      "hourly hourly hourly hourly"
+      "five-day five-day five-day five-day"
+      "feel-like feel-like humidity humidity";
+  }
+  .container > * {
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    padding: 16px;
+  }
+  .search {
+    grid-area: search;
+  }
+  #input-cites {
+    display: grid;
+    width: 200px;
+    color: black;
+    text-align: center;
+    padding: 4px;
+  }
+  
+  .city {
+    grid-area: city;
+    margin: 4px;
+    text-transform: capitalize;
+  }
+  
+  #high-low-div > span {
+    margin: 4px;
+  }
+  
+  .temp {
+    font-size: 36px;
+    font-style: normal;
+  }
+  .hourly-forecast {
+    grid-area: hourly;
+    text-transform: capitalize;
+  }
+  /* horizontal scroll added */
+  .inside-hourly-forecast {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  
+  .inside-hourly-forecast > section {
+    margin: 16px;
+    padding: 16px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .five-day {
+    grid-area: five-day;
+    text-transform: capitalize;
+  }
+  .inside-five-day-forecast {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  
+  .inside-five-day-forecast > section {
+    margin: 16px;
+    padding: 16px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .feel-like {
+    grid-area: feel-like;
+  }
+  .humidity {
+    grid-area: humidity;
+  }
+  
+  .material-symbols-rounded {
+    margin-left: 8px;
+    font-variation-settings: "FILL" 1, "wght" 300, "GRAD" -25, "opsz" 48;
+  }
+  
+  .material-symbols-rounded:hover {
+    color: rgb(83, 127, 231);
+    transform: scale(1.2);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+  }
+  
+  #search-button-div {
+    display: flex;
+    text-align: center;
+  }
+  
+  /* mobile responsive part */
+  @media (width <=500px) {
+    .inside-hourly-forecast {
+      display: flex;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+    }
+  }
